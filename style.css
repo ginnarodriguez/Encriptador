@@ -1,0 +1,115 @@
+@font-face{
+    font-family: kavoon;
+    src: url(fuentes/Kavoon-Regular.ttf);
+}
+@font-face{
+    font-family: capitaly;
+    src: url(fuentes/CapitalyScript_PERSONAL_USE_ONLY.otf);
+}
+@font-face {
+    font-family: flower;
+    src: url(fuentes/IndieFlower-Regular.ttf);
+}
+header{
+   background: url(imagenes/69.jpg);
+   background-size: contain;
+   position: relative;
+   margin-bottom: 25px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+ 
+}
+body{
+    background: linear-gradient(#888888, white);
+}
+.texto1{
+    text-align: center;
+}
+
+.colorFondo{
+    color:rgb(0,0,0);
+    font-size: 50px;
+    font-family: kavoon;
+    border-radius: 50px;
+      
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    font-family: flower;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.inputs{
+    margin-left: 13%;
+    width: auto;  
+
+}
+
+.input{
+    position: relative;
+    margin-right: 5%;
+    width: 80%;
+    font-family: flower;
+    font-size: 15px;
+    padding-top: 5%;
+    padding-left: 5%;
+    
+}
+
+.caja1{
+    display: inline-block;
+}
+
+.caja2{
+    display: inline-block;
+}
+
+
+.btn{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: flower;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;/*modifica el puntero del mouse*/
+
+}
+.btn:hover{
+    opacity: 0.5;
+    transform: scale(1);
+}
+.btn:active{
+    font-size: 10px;
+    transform: scale(0.5);
+}
+
+footer{
+   background: url(imagenes/hierba-removebg-preview.png);
+   background-size: contain;
+   position: relative;
+   margin: 190px 0 0 0;
+   padding-top: 20px;
+   padding-bottom: 60Px;
+}
+.elaborado{
+    text-align: right;
+     
+}
+.estilo{
+    color:rgb(0,0,0);
+    font-size: 20px;
+    font-family: capitaly;
+    margin-right: 10PX;
+    
+   
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+    <header class="caja">
+        <h1 class="texto1"><span class="colorFondo">Encriptador de texto</span></h1>
+    </header>
+    <main>
+        <form>
+            <fieldset class="inputs">
+                <section class="caja1">
+                    <label class="ingreso"  for="mensaje">Ingresa tu texto aquí</label>
+                    <textarea id="mensaje" cols="70" rows="15" class="input"required></textarea>
+                    <fieldset class="botones">
+                        <input type="submit" value="Encriptar"class="btn">
+                        <input type="submit" value="Desencriptar"class="btn">
+                    </fieldset>
+                </section>
+
+                <section class="caja2">
+                    <label class="ingreso"  for="ej">Texto encriptado</label>
+                    <textarea id="ej"class="input"cols="70" rows="15" placeholder="No se ha encontrado mensaje" disabled></textarea>
+                    <fieldset class="botones">
+                        <input type="submit" value="Limpiar" class="btn">
+                        <input type="submit" value="Copiar" class="btn">
+                    </fieldset>
+                </section>
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer>
+    <p class="elaborado"><span class="estilo">Elaborado por Ginna Rodríguez</span></p>
+</footer>
+</html>
