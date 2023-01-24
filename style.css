@@ -58,6 +58,7 @@ form label{
     font-size: 15px;
     padding-top: 5%;
     padding-left: 5%;
+    text-transform: lowercase;
     
 }
 
