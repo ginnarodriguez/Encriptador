@@ -20,17 +20,17 @@
                     <label class="ingreso"  for="mensaje">Ingresa tu texto aquí</label>
                     <textarea id="mensaje" cols="70" rows="15" class="input"required></textarea>
                     <fieldset class="botones">
-                        <button class="btn">Encriptar</button>
-                        <button class="btn">Desencriptar</button>
+                        <button class="btn" type="button" onclick="desencriptar()">Encriptar</button>
+                        <button class="btn" type="button">Desencriptar</button>
                     </fieldset>
                 </section>
 
                 <section class="caja2">
-                    <label class="ingreso"  for="ej">Texto encriptado</label>
-                    <textarea id="ej"class="input"cols="70" rows="15" placeholder="No se ha encontrado mensaje" disabled></textarea>
+                    <label class="ingreso"  for="resultado">Texto encriptado</label>
+                    <textarea id="resultado"class="input"cols="70" rows="15" placeholder="No se ha encontrado mensaje" disabled></textarea>
                     <fieldset class="botones">
-                        <button class="btn">Limpiar</button>
-                        <button class="btn">Copiar</button>
+                        <button class="btn" type="button">Limpiar</button>
+                        <button class="btn" type="button">Copiar</button>
                     </fieldset>
                 </section>
             </fieldset>
@@ -41,4 +41,11 @@
     <p class="elaborado"><span class="estilo">Elaborado por Ginna Rodríguez</span></p>
 </footer>
 </html>
+<script>
+    function desencriptar(){
+        var textoIngresado = document.getElementById("mensaje").value
+        var textoEncriptado = textoIngresado.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/, "ai").replace(/o/, "ober").replace(/u/, "ufat");
+        document.getElementById("resultado").value = textoEncriptado;
+    }
+</script>
 
