@@ -20,8 +20,8 @@
                     <label class="ingreso"  for="mensaje">Ingresa tu texto aquí</label>
                     <textarea id="mensaje" cols="70" rows="15" class="input"required></textarea>
                     <fieldset class="botones">
-                        <button class="btn" type="button" onclick="desencriptar()">Encriptar</button>
-                        <button class="btn" type="button">Desencriptar</button>
+                        <button class="btn" type="button" onclick="encriptar()">Encriptar</button>
+                        <button class="btn" type="button" onclick="desencriptar()">Desencriptar</button>
                     </fieldset>
                 </section>
 
@@ -29,8 +29,8 @@
                     <label class="ingreso"  for="resultado">Texto encriptado</label>
                     <textarea id="resultado"class="input"cols="70" rows="15" placeholder="No se ha encontrado mensaje" disabled></textarea>
                     <fieldset class="botones">
-                        <button class="btn" type="button">Limpiar</button>
-                        <button class="btn" type="button">Copiar</button>
+                        <button class="btn" type="button" onclick="borrar()">Limpiar</button>
+                        <button class="btn" type="button" onclick="copiar()">Copiar</button>
                     </fieldset>
                 </section>
             </fieldset>
@@ -42,10 +42,28 @@
 </footer>
 </html>
 <script>
-    function desencriptar(){
+    function encriptar(){
         var textoIngresado = document.getElementById("mensaje").value
         var textoEncriptado = textoIngresado.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/, "ai").replace(/o/, "ober").replace(/u/, "ufat");
         document.getElementById("resultado").value = textoEncriptado;
+    }
+    function desencriptar(){
+        var textoIngresado = document.getElementById("mensaje").value
+        var textoDesencriptado = textoIngresado.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/, "a").replace(/ober/, "o").replace(/ufat/, "u");
+        document.getElementById("resultado").value = textoDesencriptado;
+    }
+    function borrar(){
+        var textoIngresado = document.getElementById("resultado").value="";
+    }
+    function copiar(){
+        var textoSelect = document.getElementById("resultado").innerHTML;
+        navigator.clipboard.writeText(textoSelect)
+        .then(()=>{
+            alert("Texto copiado")
+        })
+        navigator.clipboard.readText(textoSelect)
+
+
     }
 </script>
 
