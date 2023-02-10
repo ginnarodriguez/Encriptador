@@ -12,16 +12,27 @@
     function borrar(){
         var textoIngresado = document.getElementById("resultado").value="";
     }
-    function copiar(){
-        
-        navigator.clipboard.writeText("resultado")
-        .then(()=>{
-            alert("Texto copiado")
-        })
-        navigator.clipboard.readText("resultado").then(() => {
-        console.log('Texto del portapapeles: ', text);
-        }, (err) => {
-        console.error('No se pudo leer el texto del portapapeles: ', err);
-         });
-
-    }
+    async function copiarAlPortapapeles() {
+        try {
+          // Obtener el contenido a copiar
+          var texto = document.getElementById("resultado").value;
+      
+          // Crear un objeto de tipo DataTransfer
+          var clipboard = new ClipboardEvent("").clipboardData || new DataTransfer();
+      
+          // Añadir el contenido al objeto
+          clipboard.setData("text/plain", texto);
+      
+          // Copiar el contenido al portapapeles
+          await navigator.clipboard.writeText(clipboard.getData("text/plain"));
+      
+          // Mostrar un mensaje de éxito al usuario
+          alert("Texto copiado al portapapeles");
+        } catch (err) {
+          console.error("Error al copiar al portapapeles: ", err);
+        }
+      }
+      
+          var btnCopiar = document.querySelector("#copiar");
+           btnCopiar.onclick = copiarAlPortapapeles; 
+         
